@@ -18,15 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsE-rX-eZi">
-                                <rect key="frame" x="0.0" y="20" width="600" height="106"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="i0E-0w-wjl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="101"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2B-Ha-fJK">
                                 <rect key="frame" x="0.0" y="129" width="600" height="95"/>
                                 <subviews>
@@ -50,24 +41,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sO6-gr-TBo">
                                 <rect key="frame" x="0.0" y="200" width="600" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLj-hF-vH2">
-                                        <rect key="frame" x="451" y="5" width="149" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="÷"/>
-                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="159" width="42" height="47"/>
-                                        </variation>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkb-Ss-pmU">
-                                        <rect key="frame" x="150" y="5" width="150" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-"/>
-                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="159" width="42" height="47"/>
-                                        </variation>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3A-32-dz5">
                                         <rect key="frame" x="0.0" y="5" width="149" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,6 +49,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83E-qw-3wL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNJ-c4-f4M">
                                         <rect key="frame" x="301" y="5" width="149" height="100"/>
@@ -85,6 +61,33 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXa-cq-IYa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLj-hF-vH2">
+                                        <rect key="frame" x="451" y="5" width="149" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="÷"/>
+                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="20" y="159" width="42" height="47"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TfV-K8-R0D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkb-Ss-pmU">
+                                        <rect key="frame" x="150" y="5" width="150" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="-"/>
+                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="20" y="159" width="42" height="47"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vpx-a0-SoE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -110,6 +113,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFC-wu-BsH">
                                 <rect key="frame" x="0.0" y="300" width="600" height="100"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73a-1F-A2H">
+                                        <rect key="frame" x="451" y="0.0" width="149" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="6"/>
+                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="20" y="159" width="42" height="47"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRt-0z-KZ6"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRX-zI-aol">
                                         <rect key="frame" x="301" y="0.0" width="149" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,6 +133,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ob5-7C-52b"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnu-Tg-b5D">
                                         <rect key="frame" x="150" y="0.0" width="150" height="100"/>
@@ -127,6 +145,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T22-tI-rzJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3H-fe-UyO">
                                         <rect key="frame" x="0.0" y="0.0" width="149" height="100"/>
@@ -136,15 +157,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73a-1F-A2H">
-                                        <rect key="frame" x="451" y="0.0" width="149" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="6"/>
-                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="159" width="42" height="47"/>
-                                        </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bp0-7R-djb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,6 +193,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYI-ab-jBF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWn-hD-c4P">
                                         <rect key="frame" x="150" y="0.0" width="150" height="100"/>
@@ -187,6 +205,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="42q-La-WOk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYM-kL-LYQ">
                                         <rect key="frame" x="0.0" y="0.0" width="149" height="100"/>
@@ -196,6 +217,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAI-qy-RsN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEd-W5-VfF">
                                         <rect key="frame" x="451" y="0.0" width="149" height="100"/>
@@ -205,6 +229,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QIV-By-6MX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -238,6 +265,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4QS-3T-SIj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNu-mz-ObL">
                                         <rect key="frame" x="150" y="0.0" width="150" height="100"/>
@@ -247,6 +277,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0qZ-1x-CFf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzl-Jg-OY9">
                                         <rect key="frame" x="0.0" y="0.0" width="149" height="100"/>
@@ -256,6 +289,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Apg-RZ-BaM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPx-ad-4nJ">
                                         <rect key="frame" x="451" y="0.0" width="149" height="100"/>
@@ -265,6 +301,9 @@
                                         <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="159" width="42" height="47"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dKr-0m-ixf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,6 +326,15 @@
                                     <constraint firstItem="JEj-ST-56c" firstAttribute="top" secondItem="899-is-tpK" secondAttribute="top" id="ywW-Cf-8UO"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="EsE-rX-eZi">
+                                <rect key="frame" x="0.0" y="20" width="600" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="i0E-0w-wjl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="101"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -319,6 +367,9 @@
                             <constraint firstItem="sO6-gr-TBo" firstAttribute="top" secondItem="a2B-Ha-fJK" secondAttribute="bottom" constant="-24" id="xyT-Uu-2JV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calculatorLabel" destination="EsE-rX-eZi" id="flq-JC-C7u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
