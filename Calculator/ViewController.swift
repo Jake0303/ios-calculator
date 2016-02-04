@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func resetButtonClicked(sender: AnyObject) {
+        operationString = ""
+        calculatorLabel.text = "0"
+        
+    }
     @IBAction func buttonClicked(sender: AnyObject) {
         if(sender.currentTitle != "=")
         {
@@ -31,7 +36,9 @@ class ViewController: UIViewController {
         
         if(sender.currentTitle == "=")
         {
-            let expn = NSExpression(format:operationString)
+            var fixedString = operationString.stringByReplacingOccurrencesOfString("x", withString:"*")
+            fixedString = fixedString.stringByReplacingOccurrencesOfString("÷", withString: "/")
+            let expn = NSExpression(format:fixedString)
             var result = Float();
             result = expn.expressionValueWithObject(nil, context: nil) as! Float
             print(result)
