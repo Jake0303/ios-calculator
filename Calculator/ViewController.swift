@@ -47,9 +47,10 @@ class ViewController: UIViewController {
         calculatorLabel.text = "0"
         isFirst = true
     }
+    //When any number or operator button is clicked, append to the calculator text
     @IBAction func buttonClicked(sender: AnyObject) {
         var isOperator = false
-        
+        //If the current selected button is a operator, put a flag that is indeed an operator
         for j in validOperators
         {
                 if(Character(sender.currentTitle!!) == j)
@@ -57,20 +58,22 @@ class ViewController: UIViewController {
                     isOperator = true
                 }
         }
-        
+        //Only append the operation string if we havent clicked equals and that the last character is not an operator
         if(sender.currentTitle != "=" && ((isOperator && !checkOperator() && !isFirst) || !isOperator || (isOperator && !isFirst)))
         {
+            //append the operation string with the selected button
             operationString = operationString + sender.currentTitle!!
             calculatorLabel.text = operationString
             isFirst = false
         }
         else
         {
+            //if the above has failed,reset text to 0
             calculatorLabel.text = "0"
         }
         
         
-        
+        //Once the user has pressed the equals button, evaluate the string and display the results on the calculator
         if(sender.currentTitle == "="  && !checkOperator() && !operationString.isEmpty)
         {
                 var fixedString = operationString.stringByReplacingOccurrencesOfString("x", withString:"*")
