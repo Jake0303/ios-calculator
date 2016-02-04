@@ -22,17 +22,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonClicked(sender: AnyObject) {
-        operationString = operationString + sender.currentTitle!!
+        if(sender.currentTitle != "=")
+        {
+            operationString = operationString + sender.currentTitle!!
+        }
+        
         calculatorLabel.text = operationString
         
         if(sender.currentTitle == "=")
         {
-        let stringWithMathematialOperation: String = operationString
-        let exp: NSExpression = NSExpression(format: stringWithMathematialOperation)
-        let result: Double = exp.expressionValueWithObject(nil,context: nil) as! Double
-        
-        
-        calculatorLabel.text = String(result)
+            let expn = NSExpression(format:operationString)
+            var result = Float();
+            result = expn.expressionValueWithObject(nil, context: nil) as! Float
+            print(result)
+            calculatorLabel.text = String(result)
+            operationString = calculatorLabel.text!
         }
     }
    
