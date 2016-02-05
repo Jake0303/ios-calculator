@@ -11,8 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     //Variables
     var operationString = String()
-    var validOperators: Array<Character> = ["x","+","-","÷"]
+    var validOperators: Array<Character> = ["x","+","-","÷","."]
     var isFirst = true
+    var operatorCount = Int()
     @IBOutlet weak var calculatorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -29,14 +30,17 @@ class ViewController: UIViewController {
     //Check if the last character in the operation string is a operator, if so then return true
     func checkOperator() -> Bool
     {
+        operatorCount = 0
         if(!operationString.isEmpty)
         {
             for j in validOperators
             {
                 if operationString[operationString.endIndex.predecessor()] == j
                 {
+                    operatorCount = 1
                     return true
                 }
+                
             }
         }
         return false
@@ -50,6 +54,7 @@ class ViewController: UIViewController {
     //When any number or operator button is clicked, append to the calculator text
     @IBAction func buttonClicked(sender: AnyObject) {
         var isOperator = false
+        
         //If the current selected button is a operator, put a flag that is indeed an operator
         for j in validOperators
         {
@@ -61,15 +66,26 @@ class ViewController: UIViewController {
         //Only append the operation string if we havent clicked equals and that the last character is not an operator
         if(sender.currentTitle != "=" && ((isOperator && !checkOperator() && !isFirst) || !isOperator || (isOperator && !isFirst)))
         {
-            //append the operation string with the selected button
-            operationString = operationString + sender.currentTitle!!
-            calculatorLabel.text = operationString
-            isFirst = false
+            //Make sure the last character of the string is not an operator
+            if(operatorCount < 1)
+            {
+                //append the operation string with the selected button
+                operationString = operationString + sender.currentTitle!!
+                calculatorLabel.text = operationString
+                isFirst = false
+            }
         }
         else
         {
             //if the above has failed,reset text to 0
-            calculatorLabel.text = "0"
+            if(operationString.isEmpty)
+            {
+                calculatorLabel.text = "0"
+            }
+            else
+            {
+                calculatorLabel.text = operationString
+            }
         }
         
         
@@ -84,6 +100,7 @@ class ViewController: UIViewController {
                 calculatorLabel.text = String(result)
                 operationString = calculatorLabel.text!
         }
+        operatorCount = 0
     }
 }
 
