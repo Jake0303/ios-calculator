@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4EDAD11C64FC7600425BF2 /* Icon_Calculator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F4EDAD01C64FC7600425BF2 /* Icon_Calculator.jpg */; };
 		3F79E90D1C6145BE0043A392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79E90C1C6145BE0043A392 /* AppDelegate.swift */; };
 		3F79E90F1C6145BE0043A392 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79E90E1C6145BE0043A392 /* ViewController.swift */; };
 		3F79E9121C6145BE0043A392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F79E9101C6145BE0043A392 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F4EDAD01C64FC7600425BF2 /* Icon_Calculator.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Icon_Calculator.jpg; path = ../../../Desktop/Icon_Calculator.jpg; sourceTree = "<group>"; };
 		3F79E9091C6145BE0043A392 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F79E90C1C6145BE0043A392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F79E90E1C6145BE0043A392 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				3F79E9101C6145BE0043A392 /* Main.storyboard */,
 				3F79E9131C6145BE0043A392 /* Assets.xcassets */,
 				3F79E9151C6145BE0043A392 /* LaunchScreen.storyboard */,
+				3F4EDAD01C64FC7600425BF2 /* Icon_Calculator.jpg */,
 				3F79E9181C6145BE0043A392 /* Info.plist */,
 			);
 			path = Calculator;
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4EDAD11C64FC7600425BF2 /* Icon_Calculator.jpg in Resources */,
 				3F79E9171C6145BE0043A392 /* LaunchScreen.storyboard in Resources */,
 				3F79E9141C6145BE0043A392 /* Assets.xcassets in Resources */,
 				3F79E9121C6145BE0043A392 /* Main.storyboard in Resources */,
@@ -286,6 +290,7 @@
 				3F79E91D1C6145BE0043A392 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
